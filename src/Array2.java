@@ -57,7 +57,7 @@ public class Array2 {
 
     public void printMatrix() {
         Scanner in = new Scanner(System.in);
-        String result = " ";
+        //String result = " ";
         System.out.println("The array is: \n");
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < newArray[i].length; j++) {
