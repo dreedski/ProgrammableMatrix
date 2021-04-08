@@ -15,14 +15,16 @@ public class MainProg {
 
         Array2 twoDArray = new Array2(row, column, newArray); //calling my class
 
-        do{
-        System.out.println("If you would like to set an, element press S: " + "\n" +
-                "If you would like to set an element, press G" + "\n" +
-                "If you would like to empty an element, press E" + "\n" +
-                "If you would like to print an element, press P" + "\n" +
-                "If you would like to quit, press Q");
-        String userInput = in.next();
-      
+
+        do {
+            System.out.println("If you would like to set an, element press S: " + "\n" +
+                    "If you would like to set an element, press G" + "\n" +
+                    "If you would like to empty an element, press E" + "\n" +
+                    "If you would like to print an element, press P" + "\n" +
+                    "If you would like to quit, press Q");
+            String userInput = in.next();
+
+
             if (userInput.equalsIgnoreCase("S")) {
                 twoDArray.setElement();
             } else if (userInput.equalsIgnoreCase("G")) {
@@ -36,5 +38,7 @@ public class MainProg {
                 //this will quit the program
                 twoDArray.quitProgram();
             }
-        } while(true);
+            //break;
+        } while (true);
+    }
 }
