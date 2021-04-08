@@ -33,7 +33,7 @@ public class MainProg {
                 twoDArray.clearElement();
             } else if (userInput.equalsIgnoreCase("P")) {
                 twoDArray.printMatrix();
-                //you will do you toString here
+                //you will make your own toString here
             } else if (userInput.equalsIgnoreCase("Q")) {
                 //this will quit the program
                 twoDArray.quitProgram();
