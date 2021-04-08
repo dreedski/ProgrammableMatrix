@@ -106,11 +106,11 @@ public class Array2 {
         System.out.println("The array is: \n");
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < newArray[i].length; j++) {
-                System.out.print(newArray[i][j]);
+                System.out.print(newArray[i][j] + " ");
             }
             //for (String[] row: newArray)
             //    Arrays.fill(row, " ");
-            System.out.println();
+            System.out.println("\n");
         }
     }
 
