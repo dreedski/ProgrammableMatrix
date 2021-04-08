@@ -25,7 +25,8 @@ public class Array2 {
         System.out.println("You have entered: " + "\n" +
                 "Row " + userRow + "\n" +
                 "Column " + userCol);
-        String getElement = newArray[userRow][userCol];
+        String getElement = newArray[userRow-1][userCol-1];
+        System.out.println(getElement);
     }
 
     public void setElement() {
@@ -56,14 +57,14 @@ public class Array2 {
 
     public void printMatrix() {
         Scanner in = new Scanner(System.in);
-        //String result = " ";
+        String result = " ";
         System.out.println("The array is: \n");
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < newArray[i].length; j++) {
                 System.out.print(newArray[i][j]);
             }
             for (String[] row: newArray)
-                Arrays.fill(row, "");
+                Arrays.fill(row, " ");
             System.out.println();
         }
     }
