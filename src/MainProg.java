@@ -14,6 +14,7 @@ public class MainProg {
 
 
         Array2 twoDArray = new Array2(row, column, newArray); //calling my class
+        twoDArray.fillArray();
 
 
         do {
@@ -21,6 +22,8 @@ public class MainProg {
                     "If you would like to set an element, press G" + "\n" +
                     "If you would like to empty an element, press E" + "\n" +
                     "If you would like to print an element, press P" + "\n" +
+                    "If you would like to fill the array with a single character, press F" + "\n" +
+                    "If you would like to completely empty the array, press C"  + "\n" +
                     "If you would like to quit, press Q");
             String userInput = in.next();
 
@@ -34,6 +37,10 @@ public class MainProg {
             } else if (userInput.equalsIgnoreCase("P")) {
                 twoDArray.printMatrix();
                 //you will make your own toString here
+            } else if (userInput.equalsIgnoreCase("F")) {
+                twoDArray.userFill();
+            } else if (userInput.equalsIgnoreCase("C")){
+                twoDArray.userEmpty();
             } else if (userInput.equalsIgnoreCase("Q")) {
                 //this will quit the program
                 twoDArray.quitProgram();
