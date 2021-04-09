@@ -1,5 +1,6 @@
 import java.util.*;
 
+
 public class Array2 {
     MainProg main1 = new MainProg();
     Scanner in = new Scanner(System.in);
@@ -8,15 +9,21 @@ public class Array2 {
     private int column;
 
 
-
     public Array2(int row, int column, String[][] newArray) {
         this.row = row;
         this.column = column;
         this.newArray = newArray;
     }
 
+    public void fillArray(){
+        for(int i = 0; i < newArray.length;  i++){
+            for(int j =  0; j < newArray.length; j++){
+                newArray[i][j] = "";
+            }
+        }
+    }
+
     public void getElement() {
-        Scanner in = new Scanner(System.in);
         int userRow;
         int userCol;
         //get row for the element user wants
@@ -75,7 +82,6 @@ public class Array2 {
     }
 
     public void clearElement() {
-        Scanner in = new Scanner(System.in);
         int userRow;
         int userCol;
         //get element row to remove from user
@@ -97,13 +103,13 @@ public class Array2 {
         System.out.println("You have entered: " + "\n" +
                 "Row " + userRow + "\n" +
                 "Column " + userCol);
+        newArray[userRow][userCol] = String.valueOf("");
 
     }
 
     public void printMatrix() {
-        Scanner in = new Scanner(System.in);
         //String result = " ";
-        System.out.println("The array is: \n");
+        System.out.println("The array is:");
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < newArray[i].length; j++) {
                 System.out.print(newArray[i][j] + " ");
@@ -113,6 +119,23 @@ public class Array2 {
             System.out.println("\n");
         }
     }
+
+    public void userFill(){
+        System.out.println("What character would you like to fill the array with? ");
+        String userFill = in.next();
+            for(int i = 0; i < newArray.length;  i++){
+                for(int j =  0; j < newArray.length; j++){
+                    newArray[i][j] = userFill;
+                }
+            }
+        }
+    public void userEmpty(){
+            for(int i = 0; i < newArray.length;  i++){
+                for(int j =  0; j < newArray.length; j++){
+                    newArray[i][j] = "";
+                }
+            }
+        }
 
     public void quitProgram() {
         System.out.println("The system will now exit! BYE!!!");
